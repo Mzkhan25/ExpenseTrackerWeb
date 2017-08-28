@@ -42,6 +42,7 @@ namespace ExpenseTrackerWeb.Controllers
         public async Task<IHttpActionResult> PostCategory(Category item)
         {
             var current = await InsertAsync(item);
+            
             return CreatedAtRoute("Tables", new {id = current.Id}, current);
         }
 

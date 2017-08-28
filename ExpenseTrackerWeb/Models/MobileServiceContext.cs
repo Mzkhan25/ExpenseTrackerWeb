@@ -21,7 +21,7 @@ namespace ExpenseTrackerWeb.Models
         // service name, set by the 'MS_MobileServiceName' AppSettings in the local 
         // Web.config, is the same as the service name when hosted in Azure.
         private const string ConnectionStringName =
-                "Data Source=teknita.database.windows.net;Initial Catalog=expensetracker;Integrated Security=False;User ID=devops;Password=Mz@93254;Connect Timeout=15;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+                "Data Source=teknita.database.windows.net;Initial Catalog=expensetracker;Integrated Security=False;User ID=devops;Password=Mz@93254;Connect Timeout=1500000;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
             ;
         public MobileServiceContext() : base(ConnectionStringName)
         {

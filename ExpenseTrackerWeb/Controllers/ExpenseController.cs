@@ -42,6 +42,7 @@ namespace ExpenseTrackerWeb.Controllers
         public async Task<IHttpActionResult> PostExpense(Expense item)
         {
             var current = await InsertAsync(item);
+            EmailHelper.SendEmailAsync(item);
             return CreatedAtRoute("Tables", new {id = current.Id}, current);
         }
 

@@ -1,0 +1,160 @@
+﻿@model ExpenseTrackerWeb.DataObjects.Expense
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Expense</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UserName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SubCategory)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SubCategory)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Amount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Comment)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Comment)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Receipt)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Receipt)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PaymentMethod)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PaymentMethod)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Credit)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Credit)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UploadedImage)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UploadedImage)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Version)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Version)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreatedAt)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UpdatedAt)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Deleted)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Deleted)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
