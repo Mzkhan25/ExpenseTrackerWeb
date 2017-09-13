@@ -19,7 +19,7 @@ namespace ExpenseTrackerWeb.DataObjects
         public string PaymentMethod { get; set; }
         public bool Credit { get; set; }
 
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
         public Byte[] UploadedImage { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace ExpenseTrackerWeb.Controllers
         // GET: Expenses
         public ActionResult Index()
         {
-            return View(db.Expenses.ToList());
+            return View(db.Expenses.ToList().OrderByDescending(p=>p.CreatedAt));
         }
 
         // GET: Expenses/Details/5

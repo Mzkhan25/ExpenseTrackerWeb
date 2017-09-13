@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Web;
 using System.Web.Http;
 using ExpenseTrackerWeb.DataObjects;
 using ExpenseTrackerWeb.Models;
+using Microsoft.Ajax.Utilities;
 using Microsoft.Azure.Mobile.Server.Authentication;
 using Microsoft.Azure.Mobile.Server.Config;
 using Owin;
@@ -40,6 +42,7 @@ namespace ExpenseTrackerWeb
                     TokenHandler = config.GetAppServiceTokenHandler()
                 });
             app.UseWebApi(config);
+        
         }
     }
 
